@@ -8,10 +8,10 @@
  */
 
 const solution = (num, str, result = '') => {
-  for (let i=0; i < num; i++) {
-    result += str
-  }  
-  return result
+  if (num <= 0) {
+    return result
+  }
+  return str + solution(num - 1, result + str )
 }
 
 module.exports = {
